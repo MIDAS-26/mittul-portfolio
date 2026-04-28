@@ -87,7 +87,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_var(--tw-gradient-stops))] from-cyan-900/10 via-black to-black pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center space-y-10 text-center relative z-10">
           <h3 className="text-5xl md:text-7xl font-black text-white tracking-tighter">Let&apos;s Architect the Future.</h3>
-          <p className="text-neutral-400 text-xl max-w-2xl leading-relaxed">Currently seeking high-impact roles in AI Engineering and Data Science. Open to collaborations that push the boundaries of intelligence.</p>
+          <p className="text-neutral-400 text-xl max-w-2xl leading-relaxed">Focusing on high-impact AI Engineering and Data Science. Open to collaborations that push the boundaries of intelligence.</p>
           <a href="mailto:mmdaswani9009@gmail.com" className="group relative px-12 py-6 bg-white text-black font-black rounded-full hover:scale-105 transition-all duration-500 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <span className="relative z-10 group-hover:text-white transition-colors">Start a Conversation</span>
