@@ -125,16 +125,16 @@ export default function Home() {
 const experienceData = [
   {
     title: (
-      <div className="flex flex-col items-start gap-1">
-        <div className="flex items-center gap-3">
-          <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 shrink-0">
-             <Cpu className="text-indigo-400 w-6 h-6 md:w-8 md:h-8" />
-          </div>
-          <span className="text-indigo-400 text-2xl md:text-3xl font-black">TWG AI</span>
+      <div className="flex items-center gap-3 md:gap-4">
+        <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 flex items-center justify-center border border-indigo-500/20 shrink-0 overflow-hidden p-2">
+           <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://twg.ai&size=128" alt="TWG AI Logo" width={64} height={64} unoptimized className="object-contain w-full h-full rounded-md" />
         </div>
-        <a href="https://twg.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-indigo-300 text-sm font-bold transition-colors ml-[52px] md:ml-[60px]">
-          <Globe size={14}/> twg.ai
-        </a>
+        <div className="flex flex-col items-start gap-0.5">
+          <span className="text-indigo-400 text-2xl md:text-3xl font-black">TWG AI</span>
+          <a href="https://twg.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-indigo-300 text-sm font-bold transition-colors">
+            <Globe size={14}/> twg.ai
+          </a>
+        </div>
       </div>
     ),
     content: (
@@ -156,16 +156,16 @@ const experienceData = [
   },
   {
     title: (
-      <div className="flex flex-col items-start gap-1">
-        <div className="flex items-center gap-3">
-          <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 overflow-hidden shrink-0">
-             <Image src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" alt="USC Logo" width={24} height={24} />
-          </div>
-          <span className="text-cyan-400 text-2xl md:text-3xl font-black">Keck School of Medicine USC</span>
+      <div className="flex items-center gap-3 md:gap-4">
+        <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 flex items-center justify-center border border-cyan-500/20 overflow-hidden shrink-0 p-2">
+           <Image src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" alt="USC Logo" width={64} height={64} unoptimized className="object-contain w-full h-full" />
         </div>
-        <a href="https://keck.usc.edu" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-cyan-300 text-sm font-bold transition-colors ml-[52px] md:ml-[60px]">
-          <Globe size={14}/> keck.usc.edu
-        </a>
+        <div className="flex flex-col items-start gap-0.5">
+          <span className="text-cyan-400 text-2xl md:text-3xl font-black">Keck School of Medicine USC</span>
+          <a href="https://keck.usc.edu" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-cyan-300 text-sm font-bold transition-colors">
+            <Globe size={14}/> keck.usc.edu
+          </a>
+        </div>
       </div>
     ),
     content: (
@@ -191,16 +191,16 @@ const experienceData = [
   },
   {
     title: (
-      <div className="flex flex-col items-start gap-1">
-        <div className="flex items-center gap-3">
-          <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
-             <IconBrandGithub className="text-purple-400 w-6 h-6 md:w-8 md:h-8" />
-          </div>
-          <span className="text-purple-400 text-2xl md:text-3xl font-black">Hyphenova</span>
+      <div className="flex items-center gap-3 md:gap-4">
+        <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 flex items-center justify-center border border-purple-500/20 shrink-0 overflow-hidden p-2">
+           <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://hyphenova.com&size=128" alt="Hyphenova Logo" width={64} height={64} unoptimized className="object-contain w-full h-full rounded-md" />
         </div>
-        <a href="https://hyphenova.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-purple-300 text-sm font-bold transition-colors ml-[52px] md:ml-[60px]">
-          <Globe size={14}/> hyphenova.com
-        </a>
+        <div className="flex flex-col items-start gap-0.5">
+          <span className="text-purple-400 text-2xl md:text-3xl font-black">Hyphenova</span>
+          <a href="https://hyphenova.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-purple-300 text-sm font-bold transition-colors">
+            <Globe size={14}/> hyphenova.com
+          </a>
+        </div>
       </div>
     ),
     content: (
@@ -222,16 +222,16 @@ const experienceData = [
   },
   {
     title: (
-      <div className="flex flex-col items-start gap-1">
-        <div className="flex items-center gap-3">
-          <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shrink-0">
-             <Database className="text-emerald-400 w-6 h-6 md:w-8 md:h-8" />
-          </div>
-          <span className="text-emerald-400 text-2xl md:text-3xl font-black">GlobalShala</span>
+      <div className="flex items-center gap-3 md:gap-4">
+        <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 flex items-center justify-center border border-emerald-500/20 shrink-0 overflow-hidden p-2">
+           <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://globalshala.com&size=128" alt="GlobalShala Logo" width={64} height={64} unoptimized className="object-contain w-full h-full rounded-md" />
         </div>
-        <a href="https://globalshala.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-emerald-300 text-sm font-bold transition-colors ml-[52px] md:ml-[60px]">
-          <Globe size={14}/> globalshala.com
-        </a>
+        <div className="flex flex-col items-start gap-0.5">
+          <span className="text-emerald-400 text-2xl md:text-3xl font-black">GlobalShala</span>
+          <a href="https://globalshala.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-emerald-300 text-sm font-bold transition-colors">
+            <Globe size={14}/> globalshala.com
+          </a>
+        </div>
       </div>
     ),
     content: (
