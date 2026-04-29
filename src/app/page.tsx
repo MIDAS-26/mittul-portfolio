@@ -4,7 +4,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import RetroGrid from "@/components/ui/retro-grid";
 import { Timeline } from "@/components/ui/timeline";
 import { KnowledgeGraph, NodeData } from "@/components/ui/knowledge-graph";
-import { GraduationCap, Cpu, Database, FileText, Award, MapPin, Mail, ExternalLink, Globe } from "lucide-react";
+import { GraduationCap, Cpu, Database, FileText, Award, MapPin, Mail, Globe, Sparkles } from "lucide-react";
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
 import Image from "next/image";
 
@@ -24,30 +24,30 @@ export default function Home() {
         <div className="z-10 flex flex-col items-center text-center space-y-8 px-4 max-w-5xl">
           {/* Profile Photo */}
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-2 border-white/10 ring-4 ring-black">
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-2 border-white/10 ring-4 ring-black shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                 <Image 
                     src="/profile.jpg" 
                     alt="Mittul Daswani"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[50%_75%]"
                     unoptimized
                 />
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
             <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-100 to-indigo-400 drop-shadow-2xl">
               Mittul Daswani
             </h1>
-            <div className="flex flex-col items-center gap-2">
-                <p className="text-xl md:text-2xl text-cyan-50/70 font-bold tracking-widest uppercase">
-                    AI Engineer <span className="text-cyan-400 mx-2">|</span> Data Scientist & ML Architect
+            <div className="flex flex-col items-center justify-center">
+                <p className="text-xl md:text-3xl text-cyan-50/90 font-black tracking-[0.2em] uppercase">
+                    AI ENGINEER <span className="text-cyan-400 mx-3">/</span> DATA SCIENTIST
                 </p>
             </div>
           </div>
           
-          <div className="flex items-center gap-6 pt-4">
+          <div className="flex items-center gap-6 pt-6">
             <a href="https://linkedin.com/in/mittul-daswani/" target="_blank" rel="noreferrer" className="p-4 rounded-2xl bg-white/5 border border-white/10 text-cyan-200 hover:text-white hover:bg-cyan-600/20 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-500 group">
               <IconBrandLinkedin className="w-8 h-8 group-hover:scale-110 transition-transform" />
             </a>
@@ -125,30 +125,44 @@ export default function Home() {
 const experienceData = [
   {
     title: (
-      <div className="flex items-center gap-3 md:gap-4">
-        <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 flex items-center justify-center border border-indigo-500/20 shrink-0 overflow-hidden p-2">
-           <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://twg.ai&size=128" alt="TWG AI Logo" width={64} height={64} unoptimized className="object-contain w-full h-full rounded-md" />
-        </div>
-        <div className="flex flex-col items-start gap-0.5">
-          <span className="text-indigo-400 text-2xl md:text-3xl font-black">TWG AI</span>
-          <a href="https://twg.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-indigo-300 text-sm font-bold transition-colors">
-            <Globe size={14}/> twg.ai
-          </a>
+      <div className="flex flex-col items-start gap-2 w-full">
+        <div className="flex items-center gap-4">
+          <div className="h-16 w-16 md:h-20 md:w-20 rounded-2xl bg-white flex items-center justify-center border-2 border-indigo-500/30 shrink-0 overflow-hidden p-1.5 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+             <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://twg.ai&size=128" alt="TWG AI Logo" width={80} height={80} unoptimized className="object-contain w-full h-full rounded" />
+          </div>
+          <div className="flex flex-col items-start gap-1">
+            <span className="text-indigo-400 text-3xl md:text-5xl font-black drop-shadow-[0_0_15px_rgba(99,102,241,0.6)] tracking-tight">TWG AI</span>
+            <a href="https://twg.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-indigo-200/70 hover:text-indigo-100 text-sm font-bold transition-colors">
+              <Globe size={14}/> twg.ai
+            </a>
+          </div>
         </div>
       </div>
     ),
     content: (
-      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group mt-6 md:mt-0">
-        <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500" />
+      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-black border border-white/10 relative overflow-hidden group mt-6 md:mt-0 shadow-2xl">
+        <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.8)]" />
         <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">AI Engineer | June 2025 - Present</p>
-        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
+        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-5">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Architecting enterprise-scale <strong className="text-white">GenAI solutions</strong> and driving the implementation of next-generation intelligent agents.</span>
+             <span className="leading-relaxed">Architected a scalable, low latency <strong className="text-white">Agentic Extraction Pipeline</strong> from scratch in 4 weeks, replacing a legacy 32-week pipeline.</span>
           </li>
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Full-stack AI development to integrate sophisticated <strong className="text-white">LLM-based features</strong> into production environments.</span>
+             <span className="leading-relaxed">Saved the company <strong className="text-indigo-300">$500,000/month</strong> by modernizing legacy infrastructure, operating at $0.14/page while boosting extraction accuracy by 15+%.</span>
+          </li>
+          <li className="flex items-start gap-4">
+             <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
+             <span className="leading-relaxed">Spearheaded the multi-agent backend for an <strong className="text-white">Equity Research Solution</strong> showcased to Bank of America and Guggenheim Securities C-suites.</span>
+          </li>
+          <li className="flex items-start gap-4">
+             <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
+             <span className="leading-relaxed">Developed <strong className="text-white">"Knowledge GO"</strong>, an automated intelligence engine ingesting SEC filings (13F, 10K, 10Q) into a 14+ million rows knowledge base for just $274 total procurement cost.</span>
+          </li>
+          <li className="flex items-start gap-4">
+             <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
+             <span className="leading-relaxed">Re-engineered RFP 2.0 Revamp with a RAG-ready pipeline utilizing the eVestment API and building specialized agents for automated screening.</span>
           </li>
         </ul>
       </div>
@@ -156,34 +170,40 @@ const experienceData = [
   },
   {
     title: (
-      <div className="flex items-center gap-3 md:gap-4">
-        <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 flex items-center justify-center border border-cyan-500/20 overflow-hidden shrink-0 p-2">
-           <Image src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" alt="USC Logo" width={64} height={64} unoptimized className="object-contain w-full h-full" />
-        </div>
-        <div className="flex flex-col items-start gap-0.5">
-          <span className="text-cyan-400 text-2xl md:text-3xl font-black">Keck School of Medicine USC</span>
-          <a href="https://keck.usc.edu" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-cyan-300 text-sm font-bold transition-colors">
-            <Globe size={14}/> keck.usc.edu
-          </a>
+      <div className="flex flex-col items-start gap-2 w-full">
+        <div className="flex items-center gap-4">
+          <div className="h-14 w-14 md:h-16 md:w-16 rounded-2xl bg-white flex items-center justify-center border border-cyan-500/30 shrink-0 overflow-hidden p-2 shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+             <Image src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" alt="USC Logo" width={64} height={64} unoptimized className="object-contain w-full h-full" />
+          </div>
+          <div className="flex flex-col items-start gap-1">
+            <span className="text-cyan-400 text-3xl md:text-4xl font-black drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] tracking-tight">Keck School of Medicine USC</span>
+            <a href="https://keck.usc.edu" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-cyan-200/70 hover:text-cyan-100 text-sm font-bold transition-colors">
+              <Globe size={14}/> keck.usc.edu
+            </a>
+          </div>
         </div>
       </div>
     ),
     content: (
-      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group mt-6 md:mt-0">
-        <div className="absolute top-0 left-0 w-2 h-full bg-cyan-500" />
+      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-black border border-white/10 relative overflow-hidden group mt-6 md:mt-0 shadow-2xl">
+        <div className="absolute top-0 left-0 w-2 h-full bg-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.8)]" />
         <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">Research Assistant | Oct 2024 - May 2025</p>
-        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
+        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-5">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-cyan-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Authoring 2 research papers on relations between activity and compulsions using <strong className="text-white">Fitbit physiological data</strong>, utilizing <strong className="text-white">linear mixed models</strong> and <strong className="text-white">anomaly detection</strong>.</span>
+             <span className="leading-relaxed">Authoring 2 research papers on proving DSWPD and Delayed Sleep Onset in OCD patients using <strong className="text-white">Fitbit data</strong>, time series analysis, and anomaly detection.</span>
           </li>
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-cyan-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Implemented <strong className="text-white">Isolation Forests</strong> and z-score analysis, increasing behavioral trigger identification accuracy by <strong className="text-cyan-400">30%</strong>.</span>
+             <span className="leading-relaxed">Developed a scalable data integration pipeline using parallel processing to merge Fitbit physiological data with surveys, reducing processing time by <strong className="text-cyan-300">45%</strong>.</span>
           </li>
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-cyan-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Leveraged <strong className="text-white">PCA & t-SNE</strong> for dimensionality reduction, improving model interpretability and decreasing training time by <strong className="text-cyan-400">35%</strong>.</span>
+             <span className="leading-relaxed">Implemented <strong className="text-white">Isolation Forests</strong> and z-score analysis, increasing behavioral trigger identification accuracy by 30%.</span>
+          </li>
+          <li className="flex items-start gap-4">
+             <div className="h-2 w-2 rounded-full bg-cyan-500 mt-2 shrink-0 animate-pulse" />
+             <span className="leading-relaxed">Engineered advanced signal processing workflows and optimized feature space through <strong className="text-white">PCA & t-SNE</strong>, accelerating model convergence by 40%.</span>
           </li>
         </ul>
       </div>
@@ -191,30 +211,36 @@ const experienceData = [
   },
   {
     title: (
-      <div className="flex items-center gap-3 md:gap-4">
-        <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 flex items-center justify-center border border-purple-500/20 shrink-0 overflow-hidden p-2">
-           <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://hyphenova.com&size=128" alt="Hyphenova Logo" width={64} height={64} unoptimized className="object-contain w-full h-full rounded-md" />
-        </div>
-        <div className="flex flex-col items-start gap-0.5">
-          <span className="text-purple-400 text-2xl md:text-3xl font-black">Hyphenova</span>
-          <a href="https://hyphenova.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-purple-300 text-sm font-bold transition-colors">
-            <Globe size={14}/> hyphenova.com
-          </a>
+      <div className="flex flex-col items-start gap-2 w-full">
+        <div className="flex items-center gap-4">
+          <div className="h-14 w-14 md:h-16 md:w-16 rounded-2xl bg-white flex items-center justify-center border border-purple-500/30 shrink-0 overflow-hidden p-1.5 shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+             <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://hyphenova.com&size=128" alt="Hyphenova Logo" width={64} height={64} unoptimized className="object-contain w-full h-full rounded" />
+          </div>
+          <div className="flex flex-col items-start gap-1">
+            <span className="text-purple-400 text-3xl md:text-4xl font-black drop-shadow-[0_0_15px_rgba(168,85,247,0.6)] tracking-tight">Hyphenova</span>
+            <a href="https://hyphenova.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-purple-200/70 hover:text-purple-100 text-sm font-bold transition-colors">
+              <Globe size={14}/> hyphenova.com
+            </a>
+          </div>
         </div>
       </div>
     ),
     content: (
-      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group mt-6 md:mt-0">
-        <div className="absolute top-0 left-0 w-2 h-full bg-purple-500" />
+      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-black border border-white/10 relative overflow-hidden group mt-6 md:mt-0 shadow-2xl">
+        <div className="absolute top-0 left-0 w-2 h-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)]" />
         <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">AI / ML Developer & PM | May 2024 - Aug 2024</p>
-        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
+        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-5">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-purple-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Developed a <strong className="text-white">Multimodal AI Chatbot</strong> using custom LLMs and computer vision, improving user engagement by <strong className="text-purple-400">58%</strong>.</span>
+             <span className="leading-relaxed">Developed a <strong className="text-white">Multimodal AI Chatbot</strong> using custom LLMs, NLP, and computer vision, improving user engagement by <strong className="text-purple-300">58%</strong>.</span>
           </li>
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-purple-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Engineered a <strong className="text-white">Profanity Detection Model</strong> using n-grams and KeyBERT with <strong className="text-purple-400">95% precision</strong>.</span>
+             <span className="leading-relaxed">Engineered a <strong className="text-white">Profanity Detection Model</strong> using n-grams and KeyBERT with <strong className="text-white">95% precision</strong>.</span>
+          </li>
+          <li className="flex items-start gap-4">
+             <div className="h-2 w-2 rounded-full bg-purple-500 mt-2 shrink-0 animate-pulse" />
+             <span className="leading-relaxed">Implemented a Music Recommendation System using sentiment and structure analysis of songs, increasing user satisfaction by 25%.</span>
           </li>
         </ul>
       </div>
@@ -222,30 +248,36 @@ const experienceData = [
   },
   {
     title: (
-      <div className="flex items-center gap-3 md:gap-4">
-        <div className="h-12 w-12 md:h-16 md:w-16 rounded-xl bg-white/5 flex items-center justify-center border border-emerald-500/20 shrink-0 overflow-hidden p-2">
-           <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://globalshala.com&size=128" alt="GlobalShala Logo" width={64} height={64} unoptimized className="object-contain w-full h-full rounded-md" />
-        </div>
-        <div className="flex flex-col items-start gap-0.5">
-          <span className="text-emerald-400 text-2xl md:text-3xl font-black">GlobalShala</span>
-          <a href="https://globalshala.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-emerald-300 text-sm font-bold transition-colors">
-            <Globe size={14}/> globalshala.com
-          </a>
+      <div className="flex flex-col items-start gap-2 w-full">
+        <div className="flex items-center gap-4">
+          <div className="h-14 w-14 md:h-16 md:w-16 rounded-2xl bg-white flex items-center justify-center border border-emerald-500/30 shrink-0 overflow-hidden p-1.5 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+             <Image src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://globalshala.com&size=128" alt="GlobalShala Logo" width={64} height={64} unoptimized className="object-contain w-full h-full rounded" />
+          </div>
+          <div className="flex flex-col items-start gap-1">
+            <span className="text-emerald-400 text-3xl md:text-4xl font-black drop-shadow-[0_0_15px_rgba(16,185,129,0.6)] tracking-tight">GlobalShala</span>
+            <a href="https://globalshala.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-emerald-200/70 hover:text-emerald-100 text-sm font-bold transition-colors">
+              <Globe size={14}/> globalshala.com
+            </a>
+          </div>
         </div>
       </div>
     ),
     content: (
-      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group mt-6 md:mt-0">
-        <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500" />
-        <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">Data Vis Expert | Feb 2022 - July 2022</p>
-        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
+      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-black border border-white/10 relative overflow-hidden group mt-6 md:mt-0 shadow-2xl">
+        <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)]" />
+        <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">Data Vis Domain Expert & Analyst | Feb 2022 - July 2022</p>
+        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-5">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Architected <strong className="text-white">ML pipelines</strong> for automated data processing, reducing manual operational effort by <strong className="text-emerald-400">40%</strong>.</span>
+             <span className="leading-relaxed">Architected <strong className="text-white">ML pipelines</strong> for automated data processing, reducing manual operational effort by <strong className="text-emerald-300">40%</strong>.</span>
           </li>
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Mentored a team of <strong className="text-white">15 engineers</strong> and drove client acquisition leading to <strong className="text-emerald-400">30% growth</strong>.</span>
+             <span className="leading-relaxed">Mentored a team of <strong className="text-white">15 engineers</strong> and drove client acquisition leading to <strong className="text-emerald-300">30% growth</strong>.</span>
+          </li>
+          <li className="flex items-start gap-4">
+             <div className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0 animate-pulse" />
+             <span className="leading-relaxed">Designed and implemented predictive models and dynamic dashboards using Python, Power BI, and Tableau.</span>
           </li>
         </ul>
       </div>
@@ -262,15 +294,14 @@ const knowledgeNodes: NodeData[] = [
   
   // AI/ML Section
   { 
-    id: "python", label: "Python Core", type: "skill", parent: "ai", radius: 320, angle: -130, color: "#fbbf24",
-    summary: "Professional mastery of Python for backend engineering, high-performance ML pipelines, and research modeling.",
+    id: "python", label: "Python", type: "skill", parent: "ai", radius: 320, angle: -130, color: "#fbbf24",
+    summary: "Primary language for low-latency pipelines, AI agents, and deep learning modeling.",
     experiences: [
-      { role: "AI Engineer", company: "TWG AI", details: "Enterprise GenAI solution architecture." },
-      { role: "Research Assistant", company: "Keck School of Medicine USC", details: "Time series analysis and linear mixed modeling on large-scale Fitbit datasets." },
-      { role: "AI/ML Developer", company: "Hyphenova", details: "Backend infrastructure for multimodal chatbot and profanity detection systems." }
+      { role: "AI Engineer", company: "TWG AI", details: "Developed 98% accurate Agentic Extraction Pipeline from scratch." },
+      { role: "Research Assistant", company: "Keck School of Medicine USC", details: "Time series analysis and linear mixed modeling on large-scale Fitbit datasets." }
     ],
     projects: [
-      { name: "Live Pothole Detection", description: "Engineered core computer vision logic using custom Python frameworks.", tech: ["Python", "TensorFlow", "FastAPI"] }
+      { name: "Live Pothole Detection", description: "Engineered core computer vision logic.", tech: ["Python", "TensorFlow", "FastAPI"] }
     ],
     certifications: [
       { name: "Complete Python Bootcamp", provider: "Udemy", date: "May 2021", url: "https://ude.my/UC-e0a13ba4-fde5-4d8f-8cdf-4860ee470aea" },
@@ -279,9 +310,9 @@ const knowledgeNodes: NodeData[] = [
   },
   { 
     id: "llms", label: "Generative AI", type: "skill", parent: "ai", radius: 340, angle: -90, color: "#8b5cf6",
-    summary: "Architecting and fine-tuning GenAI systems, custom LLMs, and multimodal interfaces.",
+    summary: "Architecting multi-agent systems, custom LLMs, and enterprise RAG pipelines.",
     experiences: [
-      { role: "AI Engineer", company: "TWG AI", details: "Leading implementation of next-gen intelligent agents." },
+      { role: "AI Engineer", company: "TWG AI", details: "Spearheaded multi-agent backend for Equity Research and 'Knowledge GO' SEC filing engine." },
       { role: "AI Developer", company: "Hyphenova", details: "Built custom multimodal chatbot integrating computer vision and song analysis." }
     ],
     projects: [],
@@ -290,8 +321,17 @@ const knowledgeNodes: NodeData[] = [
     ]
   },
   { 
-    id: "pytorch", label: "PyTorch / DL", type: "skill", parent: "ai", radius: 360, angle: -110, color: "#ef4444",
-    summary: "Deep Learning expertise focusing on neural network architectures and high-performance training.",
+    id: "rag", label: "RAG & LangChain", type: "skill", parent: "ai", radius: 370, angle: -70, color: "#ec4899",
+    summary: "Building Retrieval-Augmented Generation systems and complex AI workflows.",
+    experiences: [
+      { role: "AI Engineer", company: "TWG AI", details: "Re-engineered RFP 2.0 with a RAG-ready data pipeline utilizing the eVestment API and LangGraph." }
+    ],
+    projects: [],
+    certifications: []
+  },
+  { 
+    id: "pytorch", label: "PyTorch / DL", type: "skill", parent: "ai", radius: 340, angle: -110, color: "#ef4444",
+    summary: "Deep Learning expertise focusing on neural network architectures and anomaly detection.",
     experiences: [
       { role: "Research Assistant", company: "Keck School of Medicine USC", details: "Implemented Isolation Forests and advanced anomaly detection models." }
     ],
@@ -305,10 +345,10 @@ const knowledgeNodes: NodeData[] = [
 
   // Data Section
   { 
-    id: "sql", label: "SQL & Databases", type: "skill", parent: "data", radius: 320, angle: 10, color: "#f97316",
-    summary: "Expert in relational data modeling, query optimization, and scalable database architecture.",
+    id: "sql", label: "SQL & NoSQL", type: "skill", parent: "data", radius: 320, angle: 10, color: "#f97316",
+    summary: "Expert in relational data modeling, complex querying, and custom database engine architecture.",
     experiences: [
-      { role: "Data Analyst", company: "Wheel and Time", details: "Optimized logistics databases for real-time financial reporting." }
+      { role: "AI Engineer", company: "TWG AI", details: "Designed an enterprise-wide server-side Ontology Querying Tool executing against 14+ million records." }
     ],
     projects: [
       { name: "Scalable Database Engine", description: "Built a custom database engine supporting both SQL and NoSQL syntax.", tech: ["C++", "Regex", "File I/O"] }
@@ -318,29 +358,47 @@ const knowledgeNodes: NodeData[] = [
     ]
   },
   { 
-    id: "viz", label: "Business Intel", type: "skill", parent: "data", radius: 350, angle: 40, color: "#06b6d4",
-    summary: "Transforming complex datasets into actionable insights using Power BI, Tableau, and custom R visualizations.",
+    id: "spark", label: "Apache Spark", type: "skill", parent: "data", radius: 350, angle: -10, color: "#eab308",
+    summary: "Distributed data processing and large-scale data lake architecture.",
+    experiences: [],
+    projects: [
+      { name: "Big Data Hybrid Recommendation System", description: "Leveraged Spark RDDs and XGBoost, reducing system latency by 30%.", tech: ["Spark", "XGBoost", "Python"] }
+    ],
+    certifications: []
+  },
+  { 
+    id: "viz", label: "Data Intel", type: "skill", parent: "data", radius: 340, angle: 45, color: "#06b6d4",
+    summary: "Transforming complex datasets into actionable insights using Power BI, Tableau, and custom visualizations.",
     experiences: [
-      { role: "Domain Expert", company: "GlobalShala", details: "Designed dynamic dashboards that drove a 30% increase in client base." }
+      { role: "Research Assistant", company: "Keck School of Medicine USC", details: "Designed real time visualizations to monitor and compare health trends." },
+      { role: "Domain Expert", company: "GlobalShala", details: "Designed dynamic dashboards driving a 30% increase in client base." }
     ],
     projects: [],
     certifications: [
-      { name: "Data Visualization Virtual Internship", provider: "Saint Louis University / GlobalShala", date: "2022", url: "https://globalshala.com/internships/" },
       { name: "Business Analysis Essentials", provider: "Microsoft / LinkedIn", date: "Sep 2024", url: "https://www.linkedin.com/learning/paths/career-essentials-in-business-analysis-by-microsoft-and-linkedin" }
     ]
   },
 
   // Systems Section
   { 
-    id: "cpp", label: "Systems Programming", type: "skill", parent: "dev", radius: 320, angle: 140, color: "#3b82f6",
-    summary: "High-performance systems development using C++ for core engine logic and data processing.",
+    id: "cpp", label: "Systems / C++", type: "skill", parent: "dev", radius: 320, angle: 140, color: "#3b82f6",
+    summary: "High-performance systems development using C++ and CUDA for core engine logic.",
     experiences: [],
     projects: [
-      { name: "Custom Query Engine", description: "Engineered high-throughput file processing and custom syntax parser.", tech: ["C++", "File I/O"] }
+      { name: "Custom Query Engine", description: "Engineered high-throughput chunked data processing and syntax parsing.", tech: ["C++", "CUDA"] }
     ],
     certifications: [
       { name: "Advanced C++ Certification", provider: "HackerRank (3 Star)", date: "2023" }
     ]
+  },
+  { 
+    id: "cloud", label: "Cloud & DevOps", type: "skill", parent: "dev", radius: 360, angle: 125, color: "#0ea5e9",
+    summary: "Deployment and orchestration using Docker, Terraform, Azure, and Databricks.",
+    experiences: [
+      { role: "AI Engineer", company: "TWG AI", details: "Scalable agentic pipeline architecture and infrastructure deployment." }
+    ],
+    projects: [],
+    certifications: []
   },
   { 
     id: "react", label: "Fullstack Eng", type: "skill", parent: "dev", radius: 340, angle: 170, color: "#06b6d4",
@@ -349,7 +407,7 @@ const knowledgeNodes: NodeData[] = [
       { role: "Web Developer", company: "Hyphenova", details: "Integrated ML backends with responsive React frontends." }
     ],
     projects: [
-      { name: "Pothole Monitoring Portal", description: "Real-time dashboard for local authorities to monitor infrastructure.", tech: ["Next.js", "Mapbox", "Tailwind"] }
+      { name: "Pothole Monitoring Portal", description: "Real-time dashboard for local authorities.", tech: ["Next.js", "Mapbox", "Tailwind"] }
     ],
     certifications: []
   },
@@ -393,17 +451,17 @@ const bentoItems = [
     icon: <GraduationCap className="h-4 w-4 text-orange-500" />,
   },
   {
-    title: "Research Publication",
-    description: "Authored 'Live Pothole Detection: A Machine Learning Based Approach' presented at ICICN 2023.",
+    title: "Big Data Hybrid Recommendation System",
+    description: "Achieved an industry-leading RMSE of 0.9784 by combining collaborative filtering with XGBoost and distributed Spark RDDs.",
     header: (
       <Skeleton className="flex items-center justify-center p-8 group">
          <div className="relative">
-           <div className="absolute inset-0 bg-emerald-400/20 blur-2xl group-hover:scale-150 transition-transform" />
-           <FileText className="w-20 h-20 text-emerald-400 relative z-10 transition-transform group-hover:rotate-12" />
+           <div className="absolute inset-0 bg-blue-400/20 blur-2xl group-hover:scale-150 transition-transform" />
+           <Sparkles className="w-20 h-20 text-blue-400 relative z-10 transition-transform group-hover:scale-110" />
          </div>
       </Skeleton>
     ),
-    icon: <FileText className="h-4 w-4 text-emerald-400" />,
+    icon: <Sparkles className="h-4 w-4 text-blue-400" />,
   },
   {
     title: "Engineered Query Language",
