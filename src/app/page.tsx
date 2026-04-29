@@ -38,7 +38,7 @@ export default function Home() {
               <Mail className="w-8 h-8 group-hover:scale-110 transition-transform" />
             </a>
             <div className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-cyan-100 font-bold tracking-tight">
-               <MapPin className="w-5 h-5 text-cyan-400 animate-bounce" /> Los Angeles, CA
+               <MapPin className="w-5 h-5 text-cyan-400" /> Los Angeles, CA
             </div>
           </div>
         </div>
@@ -192,8 +192,8 @@ const knowledgeNodes: NodeData[] = [
       { name: "Live Pothole Detection", description: "Engineered core computer vision logic using custom Python frameworks.", tech: ["Python", "TensorFlow", "FastAPI"] }
     ],
     certifications: [
-      { name: "Complete Python Bootcamp", provider: "Udemy", date: "May 2021" },
-      { name: "Python for Data Science", provider: "Kaggle", date: "July 2023" }
+      { name: "Complete Python Bootcamp", provider: "Udemy", date: "May 2021", url: "https://ude.my/UC-e0a13ba4-fde5-4d8f-8cdf-4860ee470aea" },
+      { name: "Python for Data Science", provider: "Kaggle", date: "July 2023", url: "https://www.kaggle.com/learn/certification/midas26/pandas" }
     ]
   },
   { 
@@ -204,7 +204,7 @@ const knowledgeNodes: NodeData[] = [
     ],
     projects: [],
     certifications: [
-      { name: "Generative AI: Elevate Your Career", provider: "IBM / Coursera", date: "Sep 2024" }
+      { name: "Generative AI: Elevate Your Career", provider: "IBM / Coursera", date: "Sep 2024", url: "https://coursera.org/verify/64LZGTV71GN1" }
     ]
   },
   { 
@@ -217,7 +217,7 @@ const knowledgeNodes: NodeData[] = [
       { name: "Custom CNN Classifier", description: "Built specialized CNN architecture for real-time video defect identification.", tech: ["PyTorch", "OpenCV"] }
     ],
     certifications: [
-      { name: "Deep Learning Specialization", provider: "DeepLearning.AI", date: "2024" }
+      { name: "Deep Learning Specialization", provider: "DeepLearning.AI", date: "2024", url: "https://www.coursera.org/specializations/deep-learning" }
     ]
   },
 
@@ -232,7 +232,7 @@ const knowledgeNodes: NodeData[] = [
       { name: "Scalable Database Engine", description: "Built a custom database engine supporting both SQL and NoSQL syntax.", tech: ["C++", "Regex", "File I/O"] }
     ],
     certifications: [
-      { name: "Database Engineering", provider: "Kaggle", date: "2023" }
+      { name: "Database Engineering", provider: "Kaggle", date: "2023", url: "https://www.kaggle.com/learn/certification/midas26/sql" }
     ]
   },
   { 
@@ -243,8 +243,8 @@ const knowledgeNodes: NodeData[] = [
     ],
     projects: [],
     certifications: [
-      { name: "Data Visualization Virtual Internship", provider: "Saint Louis University / GlobalShala", date: "2022" },
-      { name: "Business Analysis Essentials", provider: "Microsoft / LinkedIn", date: "Sep 2024" }
+      { name: "Data Visualization Virtual Internship", provider: "Saint Louis University / GlobalShala", date: "2022", url: "https://globalshala.com/internships/" },
+      { name: "Business Analysis Essentials", provider: "Microsoft / LinkedIn", date: "Sep 2024", url: "https://www.linkedin.com/learning/paths/career-essentials-in-business-analysis-by-microsoft-and-linkedin" }
     ]
   },
 

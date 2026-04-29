@@ -15,7 +15,7 @@ export type NodeData = {
   summary?: string;
   experiences?: { role: string; company: string; details: string }[];
   projects?: { name: string; description: string; tech?: string[] }[];
-  certifications?: { name: string; provider: string; date: string }[];
+  certifications?: { name: string; provider: string; date: string; url?: string }[];
 };
 
 interface KnowledgeGraphProps {
@@ -333,7 +333,13 @@ export const KnowledgeGraph: React.FC<KnowledgeGraphProps> = ({ nodes, className
                              <div className="hidden sm:flex items-center gap-1.5 text-[10px] text-neutral-500 font-bold uppercase tracking-tighter bg-white/5 px-3 py-1 rounded-full">
                                <Calendar size={10}/> {cert.date}
                              </div>
-                             <ExternalLink size={16} className="text-neutral-600 group-hover:text-white transition-colors cursor-pointer" />
+                             {cert.url ? (
+                               <a href={cert.url} target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-white transition-colors">
+                                 <ExternalLink size={16} />
+                               </a>
+                             ) : (
+                               <ExternalLink size={16} className="text-neutral-800" />
+                             )}
                           </div>
                         </div>
                       ))}
