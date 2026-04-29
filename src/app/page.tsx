@@ -4,8 +4,9 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import RetroGrid from "@/components/ui/retro-grid";
 import { Timeline } from "@/components/ui/timeline";
 import { KnowledgeGraph, NodeData } from "@/components/ui/knowledge-graph";
-import { GraduationCap, Cpu, Database, FileText, Award, MapPin, Mail } from "lucide-react";
+import { GraduationCap, Cpu, Database, FileText, Award, MapPin, Mail, ExternalLink, Globe } from "lucide-react";
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,6 +15,16 @@ export default function Home() {
       <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-900/15 blur-[120px] pointer-events-none animate-pulse" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-purple-900/15 blur-[120px] pointer-events-none animate-pulse" />
 
+      {/* Subtle USC Logo Background */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none z-0">
+         <Image 
+            src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" 
+            alt="USC Logo" 
+            width={800} 
+            height={800} 
+         />
+      </div>
+
       <Navbar />
 
       {/* Hero Section */}
@@ -21,16 +32,36 @@ export default function Home() {
         <RetroGrid className="z-0" />
         
         <div className="z-10 flex flex-col items-center text-center space-y-8 px-4 max-w-5xl">
+          {/* Profile Photo */}
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-2 border-white/10 ring-4 ring-black">
+                <Image 
+                    src="https://media.licdn.com/dms/image/v2/D4E03AQG_QvR4G8W-vA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718228184651?e=1743638400&v=beta&t=H-W6oZ_G5I7oG6G5I7oG6G5I7oG6G5I7oG6G5I7oG" 
+                    alt="Mittul Daswani"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                />
+            </div>
+          </div>
+
           <div className="space-y-4">
             <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-100 to-indigo-400 drop-shadow-2xl">
               Mittul Daswani
             </h1>
-            <p className="text-xl md:text-3xl text-cyan-50/70 font-bold tracking-widest uppercase">
-              AI Engineer <span className="text-cyan-400">/</span> Data Architect
-            </p>
+            <div className="flex flex-col items-center gap-2">
+                <p className="text-xl md:text-3xl text-cyan-50/70 font-bold tracking-widest uppercase">
+                    AI Engineer
+                </p>
+                <div className="h-[2px] w-12 bg-cyan-500/50" />
+                <p className="text-xl md:text-2xl text-purple-400/80 font-bold tracking-widest uppercase">
+                    Data Scientist & ML Architect
+                </p>
+            </div>
           </div>
           
-          <div className="flex items-center gap-6 pt-8">
+          <div className="flex items-center gap-6 pt-4">
             <a href="https://linkedin.com/in/mittul-daswani/" target="_blank" rel="noreferrer" className="p-4 rounded-2xl bg-white/5 border border-white/10 text-cyan-200 hover:text-white hover:bg-cyan-600/20 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-500 group">
               <IconBrandLinkedin className="w-8 h-8 group-hover:scale-110 transition-transform" />
             </a>
@@ -107,11 +138,50 @@ export default function Home() {
 
 const experienceData = [
   {
+    title: "TWG AI",
+    content: (
+      <div className="p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group">
+        <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500" />
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+                <p className="text-indigo-400 font-black text-2xl tracking-tight">AI Engineer | June 2025 - Present</p>
+                <a href="https://twg.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-neutral-500 hover:text-indigo-300 text-sm font-bold transition-colors mt-1">
+                    <Globe size={14}/> twg.ai
+                </a>
+            </div>
+            <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20">
+                <Cpu size={24} className="text-indigo-400" />
+            </div>
+        </div>
+        <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
+          <li className="flex items-start gap-4">
+             <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
+             <span className="leading-relaxed">Architecting enterprise-scale <strong className="text-white">GenAI solutions</strong> and driving the implementation of next-generation intelligent agents.</span>
+          </li>
+          <li className="flex items-start gap-4">
+             <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
+             <span className="leading-relaxed">Leading full-stack AI development to integrate sophisticated <strong className="text-white">LLM-based features</strong> into production environments.</span>
+          </li>
+        </ul>
+      </div>
+    )
+  },
+  {
     title: "Keck School of Medicine USC",
     content: (
       <div className="p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group">
         <div className="absolute top-0 left-0 w-2 h-full bg-cyan-500" />
-        <p className="text-cyan-400 font-black mb-6 text-2xl tracking-tight">Research Assistant | Oct 2024 - Present</p>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+                <p className="text-cyan-400 font-black text-2xl tracking-tight">Research Assistant | Oct 2024 - May 2025</p>
+                <a href="https://keck.usc.edu" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-neutral-500 hover:text-cyan-300 text-sm font-bold transition-colors mt-1">
+                    <Globe size={14}/> keck.usc.edu
+                </a>
+            </div>
+            <div className="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 overflow-hidden">
+                <Image src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" alt="USC Logo" width={32} height={32} />
+            </div>
+        </div>
         <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-cyan-500 mt-2 shrink-0 animate-pulse" />
@@ -134,7 +204,17 @@ const experienceData = [
     content: (
       <div className="p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group">
         <div className="absolute top-0 left-0 w-2 h-full bg-purple-500" />
-        <p className="text-purple-400 font-black mb-6 text-2xl tracking-tight">AI / ML Developer & PM | May 2024 - Aug 2024</p>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+                <p className="text-purple-400 font-black text-2xl tracking-tight">AI / ML Developer & PM | May 2024 - Aug 2024</p>
+                <a href="https://hyphenova.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-neutral-500 hover:text-purple-300 text-sm font-bold transition-colors mt-1">
+                    <Globe size={14}/> hyphenova.com
+                </a>
+            </div>
+            <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
+                <IconBrandGithub size={24} className="text-purple-400" />
+            </div>
+        </div>
         <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-purple-500 mt-2 shrink-0 animate-pulse" />
@@ -143,10 +223,6 @@ const experienceData = [
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-purple-500 mt-2 shrink-0 animate-pulse" />
              <span className="leading-relaxed">Engineered a <strong className="text-white">Profanity Detection Model</strong> using n-grams and KeyBERT with <strong className="text-purple-400">95% precision</strong>.</span>
-          </li>
-          <li className="flex items-start gap-4">
-             <div className="h-2 w-2 rounded-full bg-purple-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Orchestrated AI strategy as core management member, aligning tech development with complex business goals.</span>
           </li>
         </ul>
       </div>
@@ -157,7 +233,17 @@ const experienceData = [
     content: (
       <div className="p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group">
         <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500" />
-        <p className="text-emerald-400 font-black mb-6 text-2xl tracking-tight">Data Vis Expert | Feb 2022 - July 2022</p>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+                <p className="text-emerald-400 font-black text-2xl tracking-tight">Data Vis Expert | Feb 2022 - July 2022</p>
+                <a href="https://globalshala.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-neutral-500 hover:text-emerald-300 text-sm font-bold transition-colors mt-1">
+                    <Globe size={14}/> globalshala.com
+                </a>
+            </div>
+            <div className="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
+                <Database size={24} className="text-emerald-400" />
+            </div>
+        </div>
         <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0 animate-pulse" />
@@ -185,6 +271,7 @@ const knowledgeNodes: NodeData[] = [
     id: "python", label: "Python Core", type: "skill", parent: "ai", radius: 320, angle: -130, color: "#fbbf24",
     summary: "Professional mastery of Python for backend engineering, high-performance ML pipelines, and research modeling.",
     experiences: [
+      { role: "AI Engineer", company: "TWG AI", details: "Enterprise GenAI solution architecture." },
       { role: "Research Assistant", company: "Keck School of Medicine USC", details: "Time series analysis and linear mixed modeling on large-scale Fitbit datasets." },
       { role: "AI/ML Developer", company: "Hyphenova", details: "Backend infrastructure for multimodal chatbot and profanity detection systems." }
     ],
@@ -200,6 +287,7 @@ const knowledgeNodes: NodeData[] = [
     id: "llms", label: "Generative AI", type: "skill", parent: "ai", radius: 340, angle: -90, color: "#8b5cf6",
     summary: "Architecting and fine-tuning GenAI systems, custom LLMs, and multimodal interfaces.",
     experiences: [
+      { role: "AI Engineer", company: "TWG AI", details: "Leading implementation of next-gen intelligent agents." },
       { role: "AI Developer", company: "Hyphenova", details: "Built custom multimodal chatbot integrating computer vision and song analysis." }
     ],
     projects: [],
