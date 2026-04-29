@@ -15,16 +15,6 @@ export default function Home() {
       <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-900/15 blur-[120px] pointer-events-none animate-pulse" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-purple-900/15 blur-[120px] pointer-events-none animate-pulse" />
 
-      {/* Subtle USC Logo Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none z-0">
-         <Image 
-            src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" 
-            alt="USC Logo" 
-            width={800} 
-            height={800} 
-         />
-      </div>
-
       <Navbar />
 
       {/* Hero Section */}
@@ -37,7 +27,7 @@ export default function Home() {
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-2 border-white/10 ring-4 ring-black">
                 <Image 
-                    src="https://media.licdn.com/dms/image/v2/D4E03AQG_QvR4G8W-vA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718228184651?e=1743638400&v=beta&t=H-W6oZ_G5I7oG6G5I7oG6G5I7oG6G5I7oG6G5I7oG" 
+                    src="/profile.jpg" 
                     alt="Mittul Daswani"
                     fill
                     className="object-cover"
@@ -51,12 +41,8 @@ export default function Home() {
               Mittul Daswani
             </h1>
             <div className="flex flex-col items-center gap-2">
-                <p className="text-xl md:text-3xl text-cyan-50/70 font-bold tracking-widest uppercase">
-                    AI Engineer
-                </p>
-                <div className="h-[2px] w-12 bg-cyan-500/50" />
-                <p className="text-xl md:text-2xl text-purple-400/80 font-bold tracking-widest uppercase">
-                    Data Scientist & ML Architect
+                <p className="text-xl md:text-2xl text-cyan-50/70 font-bold tracking-widest uppercase">
+                    AI Engineer <span className="text-cyan-400 mx-2">|</span> Data Scientist & ML Architect
                 </p>
             </div>
           </div>
@@ -138,21 +124,23 @@ export default function Home() {
 
 const experienceData = [
   {
-    title: "TWG AI",
-    content: (
-      <div className="p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group">
-        <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500" />
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-                <p className="text-indigo-400 font-black text-2xl tracking-tight">AI Engineer | June 2025 - Present</p>
-                <a href="https://twg.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-neutral-500 hover:text-indigo-300 text-sm font-bold transition-colors mt-1">
-                    <Globe size={14}/> twg.ai
-                </a>
-            </div>
-            <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20">
-                <Cpu size={24} className="text-indigo-400" />
-            </div>
+    title: (
+      <div className="flex flex-col items-start gap-1">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 shrink-0">
+             <Cpu className="text-indigo-400 w-6 h-6 md:w-8 md:h-8" />
+          </div>
+          <span className="text-indigo-400 text-2xl md:text-3xl font-black">TWG AI</span>
         </div>
+        <a href="https://twg.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-indigo-300 text-sm font-bold transition-colors ml-[52px] md:ml-[60px]">
+          <Globe size={14}/> twg.ai
+        </a>
+      </div>
+    ),
+    content: (
+      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group mt-6 md:mt-0">
+        <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500" />
+        <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">AI Engineer | June 2025 - Present</p>
         <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
@@ -160,28 +148,30 @@ const experienceData = [
           </li>
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-indigo-500 mt-2 shrink-0 animate-pulse" />
-             <span className="leading-relaxed">Leading full-stack AI development to integrate sophisticated <strong className="text-white">LLM-based features</strong> into production environments.</span>
+             <span className="leading-relaxed">Full-stack AI development to integrate sophisticated <strong className="text-white">LLM-based features</strong> into production environments.</span>
           </li>
         </ul>
       </div>
     )
   },
   {
-    title: "Keck School of Medicine USC",
-    content: (
-      <div className="p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group">
-        <div className="absolute top-0 left-0 w-2 h-full bg-cyan-500" />
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-                <p className="text-cyan-400 font-black text-2xl tracking-tight">Research Assistant | Oct 2024 - May 2025</p>
-                <a href="https://keck.usc.edu" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-neutral-500 hover:text-cyan-300 text-sm font-bold transition-colors mt-1">
-                    <Globe size={14}/> keck.usc.edu
-                </a>
-            </div>
-            <div className="h-12 w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 overflow-hidden">
-                <Image src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" alt="USC Logo" width={32} height={32} />
-            </div>
+    title: (
+      <div className="flex flex-col items-start gap-1">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 overflow-hidden shrink-0">
+             <Image src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Shield_Logo.svg" alt="USC Logo" width={24} height={24} />
+          </div>
+          <span className="text-cyan-400 text-2xl md:text-3xl font-black">Keck School of Medicine USC</span>
         </div>
+        <a href="https://keck.usc.edu" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-cyan-300 text-sm font-bold transition-colors ml-[52px] md:ml-[60px]">
+          <Globe size={14}/> keck.usc.edu
+        </a>
+      </div>
+    ),
+    content: (
+      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group mt-6 md:mt-0">
+        <div className="absolute top-0 left-0 w-2 h-full bg-cyan-500" />
+        <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">Research Assistant | Oct 2024 - May 2025</p>
         <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-cyan-500 mt-2 shrink-0 animate-pulse" />
@@ -200,21 +190,23 @@ const experienceData = [
     )
   },
   {
-    title: "Hyphenova",
-    content: (
-      <div className="p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group">
-        <div className="absolute top-0 left-0 w-2 h-full bg-purple-500" />
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-                <p className="text-purple-400 font-black text-2xl tracking-tight">AI / ML Developer & PM | May 2024 - Aug 2024</p>
-                <a href="https://hyphenova.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-neutral-500 hover:text-purple-300 text-sm font-bold transition-colors mt-1">
-                    <Globe size={14}/> hyphenova.com
-                </a>
-            </div>
-            <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
-                <IconBrandGithub size={24} className="text-purple-400" />
-            </div>
+    title: (
+      <div className="flex flex-col items-start gap-1">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 shrink-0">
+             <IconBrandGithub className="text-purple-400 w-6 h-6 md:w-8 md:h-8" />
+          </div>
+          <span className="text-purple-400 text-2xl md:text-3xl font-black">Hyphenova</span>
         </div>
+        <a href="https://hyphenova.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-purple-300 text-sm font-bold transition-colors ml-[52px] md:ml-[60px]">
+          <Globe size={14}/> hyphenova.com
+        </a>
+      </div>
+    ),
+    content: (
+      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group mt-6 md:mt-0">
+        <div className="absolute top-0 left-0 w-2 h-full bg-purple-500" />
+        <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">AI / ML Developer & PM | May 2024 - Aug 2024</p>
         <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-purple-500 mt-2 shrink-0 animate-pulse" />
@@ -229,21 +221,23 @@ const experienceData = [
     )
   },
   {
-    title: "GlobalShala",
-    content: (
-      <div className="p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group">
-        <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500" />
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-                <p className="text-emerald-400 font-black text-2xl tracking-tight">Data Vis Expert | Feb 2022 - July 2022</p>
-                <a href="https://globalshala.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-neutral-500 hover:text-emerald-300 text-sm font-bold transition-colors mt-1">
-                    <Globe size={14}/> globalshala.com
-                </a>
-            </div>
-            <div className="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
-                <Database size={24} className="text-emerald-400" />
-            </div>
+    title: (
+      <div className="flex flex-col items-start gap-1">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 md:h-12 md:w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shrink-0">
+             <Database className="text-emerald-400 w-6 h-6 md:w-8 md:h-8" />
+          </div>
+          <span className="text-emerald-400 text-2xl md:text-3xl font-black">GlobalShala</span>
         </div>
+        <a href="https://globalshala.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-emerald-300 text-sm font-bold transition-colors ml-[52px] md:ml-[60px]">
+          <Globe size={14}/> globalshala.com
+        </a>
+      </div>
+    ),
+    content: (
+      <div className="p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 relative overflow-hidden group mt-6 md:mt-0">
+        <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500" />
+        <p className="text-white font-black text-xl md:text-2xl tracking-tight mb-6">Data Vis Expert | Feb 2022 - July 2022</p>
         <ul className="list-none text-neutral-300 text-sm md:text-base space-y-6">
           <li className="flex items-start gap-4">
              <div className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0 animate-pulse" />
